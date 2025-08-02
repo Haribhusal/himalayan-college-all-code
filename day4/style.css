@@ -1,0 +1,17 @@
+/* Syntax */
+
+/* selector {
+    propery: value;
+    We call "css rule" for each property-value pair.
+    propery: value;
+    We separate/Terminate each rule by a ";"
+} */
+
+/* Example */
+
+h1 {
+    border: 5px solid black;
+    background-color: yellow;
+    border-style: dotted;
+
+}

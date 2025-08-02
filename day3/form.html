@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+
+
+    <h1>Register Form</h1>
+    <form action="">
+
+        <div>
+            <label for="">Full Name *</label>
+            <input type="text" placeholder="Enter Full Name" required>
+        </div>
+        <hr />
+        <div>
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+        <hr />
+        <div>
+            <input id="maleSelector" type="radio" name="genderSelection">
+            <label for="maleSelector">Male</label>
+
+            <input id="femaleSelector" type="radio" name="genderSelection">
+            <label for="femaleSelector">Female</label>
+
+            <input id="others" type="radio" name="genderSelection">
+            <label for="others">Others</label>
+        </div>
+
+        <hr />
+        <div>
+            <input id="cricket" type="checkbox" name="genderSelection">
+            <label for="cricket">Cricket</label>
+
+            <input id="football" type="checkbox" name="genderSelection">
+            <label for="football">Football</label>
+
+            <input id="basketball" type="checkbox" name="genderSelection">
+            <label for="basketball">Basketball</label>
+        </div>
+        <hr />
+        <div>
+            <select name="" id="">
+                <option value="nep">Nepal</option>
+                <option value="ind">India</option>
+                <option value="china">China</option>
+                <option value="aus">Australia</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+            </select>
+        </div>
+
+        <hr />
+
+        <div>
+            <label for="">Profile Picture/ Resume</label>
+            <input type="file" multiple accept="image/*">
+        </div>
+        <hr />
+
+        <div>
+            <label for="">DOB</label>
+            <input type="date">
+        </div>
+        <hr />
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>

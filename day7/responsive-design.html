@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            padding: 0 7%;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100px;
+
+        }
+
+        .news-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 7%;
+        }
+
+        @media screen and (min-width:768px) {
+            .news-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: red;
+            }
+
+            .news-section {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://picsum.photos/id/13/80/80" alt="">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Our Works</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <button>Login</button>
+    </header>
+    <main>
+        <section class="news-section">
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <h3>Article title goes here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore itaque pariatur laudantium.
+                </p>
+                <button>Read More</button>
+            </article>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
