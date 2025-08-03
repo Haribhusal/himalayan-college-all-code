@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightblue;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 300px;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .heading {
+            color: blueviolet;
+        }
+
+        form {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 6px;
+            display: flex;
+        }
+
+        form input {
+            flex: 1;
+            padding: 5px 10px;
+            border: none;
+        }
+
+        form button {
+            border: none;
+            background-color: blue;
+            color: white;
+            padding: 0 5px;
+        }
+
+        ul li {
+            margin: 10px 0;
+            display: flex;
+            border: 1px solid gray;
+            padding: 3px 10px;
+            border-radius: 3px;
+            justify-content: space-between;
+        }
+
+        ul div {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3 class="heading">My Todo App</h3>
+        <form action="" onsubmit="handleSubmit(event)">
+            <input id="task_input" type="text" placeholder="Enter Todo">
+            <button>
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </form>
+        <ul id="task_list">
+            <li>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing.
+                </p>
+                <div class="actions">
+                    <button><i class="fa-solid fa-pencil"></i></button>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <script>
+
+        // console.log(document)
+
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            let input_element = document.getElementById('task_input');
+            let input_value = input_element.value.trim();
+            if (!input_value) { return }
+            tasks.push(input_value)
+            console.log(tasks)
+            localStorage.setItem('tasks', JSON.stringify(tasks))
+            displayTasks(tasks);
+            input_element.value = ''
+
+        }
+
+        function displayTasks(tasks) {
+            let display_area = document.getElementById('task_list');
+            display_area.innerHTML = '';
+            tasks.forEach((item, index) => {
+                let createli = `
+                <li>
+                <p>
+                    ${item}
+                </p>
+                <div class="actions">
+                    <button onclick='handleEdit(${index})'><i class="fa-solid fa-pencil"></i></button>
+                    <button onclick='handleDelete(${index})'>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </li>
+                `
+                display_area.innerHTML += createli
+            })
+        }
+
+        function handleEdit(index) {
+            let newValue = prompt('Entere new value', tasks[index]);
+            tasks[index] = newValue;
+            localStorage.setItem('tasks', JSON.stringify(tasks))
+            displayTasks(tasks)
+
+        }
+
+        function handleDelete(index) {
+            tasks.splice(index, 1)
+            localStorage.setItem('tasks', JSON.stringify(tasks))
+            displayTasks(tasks)
+
+        }
+        displayTasks(tasks)
+
+    </script>
+</body>
+
+</html>
