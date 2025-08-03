@@ -1,0 +1,10 @@
+git init
+paste the link from remote repository
+git add .
+git commit -m "your message here"
+git push origin main
+
+
+If it asks for user configuration
+git config --global user.email "your_email_id_here"
+git config --global user.name "your_github_username"
